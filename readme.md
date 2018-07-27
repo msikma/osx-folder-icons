@@ -7,7 +7,9 @@ This repository contains a number of folder icons I made for Mac OS X/macOS, for
   <img src="https://raw.githubusercontent.com/msikma/osx-folder-icons/master/resources/icons_2.png" alt="Icon example image" />
 </p>
 
-This icon set includes a number of Folder icon color modifications, and there's a PSD that you can easily use to create new icons. Feel free to submit new icons you make. Each icon includes five resolutions (16×16@2, 32×32@2, 128×128@2, 256×256@2, and 512×512@2), retina only (but I think they should work on non-retina screens just as well).
+This icon set includes a number of Folder icon color modifications, and there's PSDs that you can easily use to create new icons. Feel free to submit new icons you make.
+
+Each icon includes seven responsive sizes (16×16, 16×16@2, 32×32@2, 128×128, 128×128@2, 256×256@2, and 512×512@2) and work on both retina and non-retina displays. Each size is set up as a slice in the PSD file, so to save a new iconset all you need to use is _Save for Web_.
 
 Finder sidebar
 --------------
