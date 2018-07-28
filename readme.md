@@ -24,6 +24,20 @@ Note that, if you use mySIMBL, the icons will look best if you set the Finder's 
 
 Also, I recommend setting the icons with a tool such as [fileicon](https://www.npmjs.com/package/fileicon), which ensures that all responsive sizes are actually present (this is not the case when dragging the icon in the Finder's Info window).
 
+Hiding icons from Git
+---------------------
+
+Nice as these icons are, they're really annoying to work with when you use Git. Best thing to do is ignore them globally.
+
+Since icon files have a rather weird filename ("Icon" followed by a literal return carriage), here's how you properly get rid of them:
+
+```
+# create .gitignore_global file containing "Icon\r"
+echo -n -e '\x49\x63\x6f\x6e\x0d\x0d' > ~/.gitignore_global
+# configure Git to use the global ignore file we just made
+git config --global core.excludesfile ~/.gitignore_global
+```
+
 Converting images to icons and vice versa
 -----------------------------------------
 
