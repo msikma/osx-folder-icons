@@ -44,7 +44,7 @@ Converting images to icons and vice versa
 To convert a directory of images to an icon:
 
 ```
-iconutil --convert icns bluegreen.iconset bluegreen.icns
+iconutil --convert icns bluegreen.iconset --output bluegreen.icns
 ```
 
 To convert an icon to a directory:
