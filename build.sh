@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
-files=("aqua" "blue" "darkblue" "generic" "gray" "green" "orange" "pink" "red" "syft" "violet" "white" "yellow")
-for i in "${files[@]}"; do
-  echo "Building $i"
-  iconutil --convert icns ./iconset/"$i".iconset && mv ./iconset/"$i".icns ./icns/
+
+red="\033[0;31m"
+yellow="\033[0;33m"
+reset="\033[0m"
+
+find ./iconset -type d -name '*.iconset' -depth 1 | sort | while read path; do
+  iconset=$(basename "$path")
+  name="${iconset%.*}"
+  icns="./iconset/$name.icns"
+  echo -e "Building $red$name$reset ($yellow$path$reset)"
+  iconutil --convert icns $path && mv $icns ./icns/
 done
+
 echo "Done"
